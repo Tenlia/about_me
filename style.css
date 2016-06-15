@@ -28,28 +28,27 @@
   border: 3px solid #669999;
   border-radius: 10px;
 }
+* {
+  font-family: helvetica;
+}
 h1 {
   position: relative;
   left: 50px;
   color: #f1cf28;
-  font-family: cursive;
 }
 h2 {
   color: #ffe192;
-  font-family: cursive;
   font-size: 24px;
   padding: 5px;
   margin: 5px;
 }
 p {
   color: #ffe87b;
-  font-family: cursive;
   font-size: 16px;
   padding: 10px;
 }
 li {
   color: #ffe152;
-  font-family: cursive;
   font-size: 18px;
 }
 html {
