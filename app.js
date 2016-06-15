@@ -83,15 +83,19 @@ while(states === false && i < 3){
 var words = false;
 var about = ['place', 'mystical', 'covered', 'clouds', 'nopumas', 'home', 'cool', 'new'];
 var j = 0;
+var k = 0;
 
-while(words === false && j < 7){
+while(words === false && k < 7){
   var answer9 = prompt('What are one of the words I used to describe Elizabeth\'s cool new home Seattle, Washington?').toLowerCase();
   for(about[j]; j < about.length; j++){
     if(answer9 === about[j]){
-      alert('You\'re absolutely correct!');
-      words === true;
-    }else{
-      alert('Nope! I haven\'t used that word.');
+      words = true;
     }
+  }
+  if(words === true){
+    alert('That\'s one of the words, you got it right!');
+  }else{
+    alert('That\'s not one of the words.');
+    k++;
   }
 }
