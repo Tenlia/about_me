@@ -42,3 +42,11 @@ if(answer5 === 'no' || answer5 === 'n') {
 }else{
   alert('Incorrect! Don\'t put the Elizabeth in the sun, she will sizzle like a grape in a microwave.');
 }
+
+var answer6 = prompt('Is this a yes or no question?').toLowerCase();
+
+if(answer6 === 'no' || answer6 === 'n') {
+  alert('Of course it is! This one was supposed to be easy!');
+}else{
+  alert('Woo, you got it!');
+}
