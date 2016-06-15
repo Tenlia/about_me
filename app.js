@@ -80,15 +80,18 @@ while(states === false && i < 3){
 }
 
 // Making a question with an array of answers that are all correct. It should have up to 7 tries.
-// var words = false;
-// var answer9 = prompt('What are one of the words I used to describe Elizabeth\'s cool new home Seattle, Washington?').toLowerCase();
-// var about = ['place', 'mystical', 'covered', 'clouds', 'nopumas', 'home', 'cool', 'new'];
-// var j = 0;
-//
-// while(words === false && j < 7){
-//   if(answer9 === about(k); k < about.length; k++){
-//     alert('You\'re absolutely correct!');
-//   }else{
-//     alert('Nope! I haven\'t used that word.')
-//     j++;
-//   }
+var words = false;
+var about = ['place', 'mystical', 'covered', 'clouds', 'nopumas', 'home', 'cool', 'new'];
+var j = 0;
+
+while(words === false && j < 7){
+  var answer9 = prompt('What are one of the words I used to describe Elizabeth\'s cool new home Seattle, Washington?').toLowerCase();
+  for(about[j]; j < about.length; j++){
+    if(answer9 === about[j]){
+      alert('You\'re absolutely correct!');
+      words === true;
+    }else{
+      alert('Nope! I haven\'t used that word.');
+    }
+  }
+}
