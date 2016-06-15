@@ -40,5 +40,5 @@ var answer5 = prompt('Is Elizabeth safe in the sunlight?').toLowerCase();
 if(answer5 === 'no' || answer5 === 'n') {
   alert('Correct! The Elizabeth is sensitive to the light. The Sun is her natural enemy.');
 }else{
-  alert('Incorrect! Don\'t put the Elizabeth in the sun, she will burn like a grape in a microwave.');
+  alert('Incorrect! Don\'t put the Elizabeth in the sun, she will sizzle like a grape in a microwave.');
 }
