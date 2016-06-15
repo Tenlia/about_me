@@ -1,9 +1,51 @@
 .boxes {
+  position: absolute;
   height: 400px;
   width: 500px;
+  margin: 10px;
 }
 #bio {
   background-color: #003333;
   border: 3px solid #407f7f;
   border-radius: 10px;
+}
+#edu {
+  left: 530px;
+  background-color: #567714;
+  border: 3px solid #d4ee9f;
+  border-radius: 10px;
+}
+#exp {
+  top: 500px;
+  background-color: #354f00;
+  border: 3px solid #a5c663;
+  border-radius: 10px;
+}
+#fun {
+  top: 500px;
+  left: 530px;
+  background-color: #0d4d4d;
+  border: 3px solid #669999;
+  border-radius: 10px;
+}
+h2 {
+  color: #ffe192;
+  font-family: cursive;
+  font-size: 24px;
+  padding: 5px;
+  margin: 5px;
+}
+p {
+  color: #ffe87b;
+  font-family: cursive;
+  font-size: 16px;
+  padding: 10px;
+}
+li {
+  color: #ffe152;
+  font-family: cursive;
+  font-size: 18px;
+}
+html {
+  background-color: #aa3939;
 }
