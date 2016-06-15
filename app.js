@@ -4,10 +4,14 @@
 var userName = prompt('Hello! What is your name?');
 alert('Welcome ' + userName + ' glad you\'re here!');
 
+//I want to give a total at the end for the user of correct vs incorrect answers.
+var tally = 0;
+
 //This won't count as a yes-or-no question. But I wanted to do it anyways!
 var answer1 = prompt('What\'s Elizabeth\'s name?').toLowerCase();
 if(answer1 === 'elizabeth' || answer1 === 'liz'){
   alert('Right! Damn, I thought I got you with that one...');
+  tally++;
 }else{
   alert('Wrong, Ha! Tricky question, but you did well, I think...');
 }
@@ -16,6 +20,7 @@ if(answer1 === 'elizabeth' || answer1 === 'liz'){
 var answer2 = prompt('Did The Elizabeth move to Seattle, Washington because of pumas?').toLowerCase();
 if(answer2 === 'no' || answer2 === 'n'){
   alert('Correct! The Elizabeth moved to Seattle to escape the evil California sun.');
+  tally++;
 }else{
   alert('Incorrect, The Elizabeth moved to Seattle to get away from the unrelenting California sun.');
 }
@@ -23,6 +28,7 @@ if(answer2 === 'no' || answer2 === 'n'){
 var answer3 = prompt('Can you drop someone(Elizabeth) in a pool to see if they\'ll swim?');
 if(answer3 === 'yes' || answer3 === 'y'){
   alert('That\'s right! In-fact, that would be The Elizabeth\'s primary form of education!');
+  tally++;
 }else{
   alert('Wrong, of course you can drop someone into a pool to see if they\'ll swim. It\'s just not recommended with small children or the elderly.');
 }
@@ -30,6 +36,7 @@ if(answer3 === 'yes' || answer3 === 'y'){
 var answer4 = prompt('Would you trust The Elizabeth with your computer?').toLowerCase();
 if(answer4 === 'no' || answer4 === 'n'){
   alert('Right! Wait, how\'d I make that the right answer? You\'re supposed to trust me!');
+  tally++;
 }else{
   alert('Wrong! Wait, no, I meant that to be right! You can trust me with a computer, really!');
 }
@@ -37,6 +44,7 @@ if(answer4 === 'no' || answer4 === 'n'){
 var answer5 = prompt('Is The Elizabeth safe in the sunlight?').toLowerCase();
 if(answer5 === 'no' || answer5 === 'n'){
   alert('Correct! The Elizabeth is sensitive to the light. The Sun is her natural enemy.');
+  tally++;
 }else{
   alert('Incorrect! Don\'t put The Elizabeth in the sun, she will sizzle like a grape in a microwave.');
 }
@@ -47,6 +55,7 @@ if(answer6 === 'no' || answer6 === 'n'){
   alert('Of course it is! This one was supposed to be easy!');
 }else if(answer6 === 'yes' || answer6 === 'y'){
   alert('Woo, you got it!');
+  tally++;
 }else{
   var answer7 = prompt('Wait, did you break my question?').toLowerCase();
   if(answer7 === 'no' || answer7 === 'n'){
@@ -67,6 +76,7 @@ while(states === false && i < 3){
   if(answer8 === 3){
     alert('Cool, you got it right!');
     states = true;
+    tally++;
   }else if(answer8 > 3){
     alert('Sorry, that number is too large.');
     i++;
@@ -79,13 +89,13 @@ while(states === false && i < 3){
   }
 }
 
-// Making a question with an array of answers that are all correct. It should have up to 7 tries.
+// Making a question with an array of answers that are all correct. It should have up to 6 tries.
 var words = false;
-var about = ['place', 'mystical', 'covered', 'clouds', 'nopumas', 'home', 'cool', 'new'];
+var about = ['place', 'mystical', 'covered', 'clouds', 'home', 'cool', 'new'];
 var j = 0;
 var k = 0;
 
-while(words === false && k < 7){
+while(words === false && k < 6){
   var answer9 = prompt('What are one of the words I used to describe Elizabeth\'s cool new home Seattle, Washington?').toLowerCase();
   for(about[j]; j < about.length; j++){
     if(answer9 === about[j]){
@@ -94,8 +104,20 @@ while(words === false && k < 7){
   }
   if(words === true){
     alert('That\'s one of the words, you got it right!');
+    tally++;
   }else{
     alert('That\'s not one of the words.');
     k++;
   }
+}
+alert('I would have accepted "place","mystical","covered","clouds","home","cool" and "new".');
+
+if(tally < 8 && tally > 4){
+  alert('You did really well, you got ' + tally + ' out of 8 right!');
+}else if(tally < 4 && tally > 0){
+  alert('You did okay, you got ' + tally + ' out of 8 right.');
+}else if(tally === 8){
+  alert('Wow! you got all 8 questions right!');
+}else{
+  alert('Hmm, okay, you got no right answers... out of 8');
 }
