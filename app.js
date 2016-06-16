@@ -99,12 +99,12 @@ while(words === false && turns < 6){
   for(var j = 0; j < about.length; j++){
     if(answer9 === about[j]){
       words = true;
+      alert('That\'s one of the words, you got it right!');
+      tally++;
+      break;
     }
   }
-  if(words === true){
-    alert('That\'s one of the words, you got it right!');
-    tally++;
-  }else{
+  if(words !== true){
     alert('That\'s not one of the words.');
     turns++;
   }
