@@ -67,26 +67,24 @@ if(answer6 === 'no' || answer6 === 'n'){
   }
 }
 
-//making a question that loops for the false answers(up to 3 times) while letting the correct answer through.
+//making a question that loops for the false answers(up to 4 tries) while letting the correct answer through.
 alert('Okay, let\'s do something else, this time. You can\'t get it wrong because you have multiple tries!');
-var states = false;
+var userIncorrect = true;
 var tries = 0;
-while(states === false && tries < 3){
+while(userIncorrect && tries < 4){
   var answer8 = parseFloat(prompt('How many states has The Elizabeth lived in?'));
   if(answer8 === 3){
     alert('Cool, you got it right!');
-    states = true;
+    userIncorrect = false;
     tally++;
   }else if(answer8 > 3){
     alert('Sorry, that number is too large.');
-    tries++;
   }else if(answer8 < 3){
     alert('Sorry, that number is too small.');
-    tries++;
   }else{
     alert('That\'s not a number!');
-    tries++;
   }
+  tries++;
 }
 
 // Making a question with an array of answers that are all correct. It should have up to 6 tries.
