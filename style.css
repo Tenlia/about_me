@@ -5,10 +5,11 @@
   margin:10px;
 }
 .list {
-  position:absolute;
-  top:120px;
+  /*position:absolute;*/
+  position:fixed;
+  top:150px;
   left:532px;
-  height:670px;
+  height:360px;
   width:150px;
   border:3px solid #ffaaaa;
   border-radius:10px;
