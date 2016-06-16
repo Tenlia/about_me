@@ -70,7 +70,7 @@ function question5(){
 question5();
 
 
-// //just another yes-or-no question. This one needed an answer for 'maybe'.
+//just another yes-or-no question. This one needed an answer for 'maybe'.
 function question6(){
   var answer6 = prompt('Is this a yes or no question?').toLowerCase();
   if(answer6 === 'no' || answer6 === 'n'){
@@ -91,54 +91,60 @@ function question6(){
 };
 question6();
 
-// //making a question that loops for the false answers(up to 4 tries) while letting the correct answer through.
-// alert('Okay, let\'s do something else, this time. You can\'t get it wrong because you have multiple tries!');
-// var userIncorrect = true;
-// var tries = 0;
-// while(userIncorrect && tries < 4){
-//   var answer8 = parseFloat(prompt('How many states has The Elizabeth lived in?'));
-//   if(answer8 === 3){
-//     alert('Cool, you got it right!');
-//     userIncorrect = false;
-//     tally++;
-//   }else if(answer8 > 3){
-//     alert('Sorry, that number is too large.');
-//   }else if(answer8 < 3){
-//     alert('Sorry, that number is too small.');
-//   }else{
-//     alert('That\'s not a number!');
-//   }
-//   tries++;
-// }
-//
-// // Making a question with an array of answers that are all correct. It should have up to 6 tries.
-// var words = false;
-// var about = ['place', 'mystical', 'covered', 'clouds', 'home', 'cool', 'new'];
-// var turns = 0;
-//
-// while(words === false && turns < 6){
-//   var answer9 = prompt('What are one of the words I used to describe Elizabeth\'s cool new home Seattle, Washington?').toLowerCase();
-//   for(var j = 0; j < about.length; j++){
-//     if(answer9 === about[j]){
-//       words = true;
-//       alert('That\'s one of the words, you got it right!');
-//       tally++;
-//       break;
-//     }
-//   }
-//   if(words !== true){
-//     alert('That\'s not one of the words.');
-//     turns++;
-//   }
-// }
-// alert('I would have accepted "place","mystical","covered","clouds","home","cool" and "new".');
-//
-// if(tally < 8 && tally > 4){
-//   alert('You did really well, ' + userName + ', you got ' + tally + ' out of 8 right!');
-// }else if(tally < 4 && tally > 0){
-//   alert('You did okay, ' + userName + ', you got ' + tally + ' out of 8 right.');
-// }else if(tally === 8){
-//   alert('Wow, ' + userName + '! you got all 8 questions right!');
-// }else{
-//   alert('Hmm, okay, ' + userName + ', you got no right answers... out of 8');
-// }
+//making a question that loops for the false answers(up to 4 tries) while letting the correct answer through.
+//Alison functionized
+alert('Okay, let\'s do something else, this time. You can\'t get it wrong because you have multiple tries!');
+var userIncorrect = true;
+var tries = 0;
+function stateQuestion(){
+  while(userIncorrect && tries < 4){
+    var answer8 = parseFloat(prompt('How many states has The Elizabeth lived in?'));
+    if(answer8 === 3){
+      alert('Cool, you got it right!');
+      userIncorrect = false;
+      tally++;
+    }else if(answer8 > 3){
+      alert('Sorry, that number is too large.');
+    }else if(answer8 < 3){
+      alert('Sorry, that number is too small.');
+    }else{
+      alert('That\'s not a number!');
+    }
+    tries++;
+  }
+};
+stateQuestion();
+// Making a question with an array of answers that are all correct. It should have up to 6 tries.
+//Alison functionized this
+var words = false;
+var about = ['place', 'mystical', 'covered', 'clouds', 'home', 'cool', 'new'];
+var turns = 0;
+function wordsQuestion(){
+  while(words === false && turns < 6){
+    var answer9 = prompt('What are one of the words I used to describe Elizabeth\'s cool new home Seattle, Washington?').toLowerCase();
+    for(var j = 0; j < about.length; j++){
+      if(answer9 === about[j]){
+        words = true;
+        alert('That\'s one of the words, you got it right!');
+        tally++;
+        break;
+      }
+    }
+    if(words !== true){
+      alert('That\'s not one of the words.');
+      turns++;
+    }
+  }
+  alert('I would have accepted "place","mystical","covered","clouds","home","cool" and "new".');
+};
+wordsQuestion();
+
+if(tally < 8 && tally > 4){
+  alert('You did really well, ' + userName + ', you got ' + tally + ' out of 8 right!');
+}else if(tally < 4 && tally > 0){
+  alert('You did okay, ' + userName + ', you got ' + tally + ' out of 8 right.');
+}else if(tally === 8){
+  alert('Wow, ' + userName + '! you got all 8 questions right!');
+}else{
+  alert('Hmm, okay, ' + userName + ', you got no right answers... out of 8');
+};
