@@ -112,11 +112,11 @@ while(words === false && turns < 6){
 alert('I would have accepted "place","mystical","covered","clouds","home","cool" and "new".');
 
 if(tally < 8 && tally > 4){
-  alert('You did really well,' + userName + ' you got ' + tally + ' out of 8 right!');
+  alert('You did really well, ' + userName + ', you got ' + tally + ' out of 8 right!');
 }else if(tally < 4 && tally > 0){
-  alert('You did okay,' + userName + ' you got ' + tally + ' out of 8 right.');
+  alert('You did okay, ' + userName + ', you got ' + tally + ' out of 8 right.');
 }else if(tally === 8){
-  alert('Wow!' + userName + ' you got all 8 questions right!');
+  alert('Wow, ' + userName + '! you got all 8 questions right!');
 }else{
-  alert('Hmm, okay,' + userName + ' you got no right answers... out of 8');
+  alert('Hmm, okay, ' + userName + ', you got no right answers... out of 8');
 }
