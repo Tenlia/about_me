@@ -25,7 +25,7 @@ if(answer2 === 'no' || answer2 === 'n'){
   alert('Incorrect, The Elizabeth moved to Seattle to get away from the unrelenting California sun.');
 }
 
-var answer3 = prompt('Can you drop someone(Elizabeth) in a pool to see if they\'ll swim?');
+var answer3 = prompt('Can you drop someone(Elizabeth) in a pool to see if they\'ll swim?').toLowerCase();
 if(answer3 === 'yes' || answer3 === 'y'){
   alert('That\'s right! In-fact, that would be The Elizabeth\'s primary form of education!');
   tally++;
@@ -70,8 +70,8 @@ if(answer6 === 'no' || answer6 === 'n'){
 //making a question that loops for the false answers(up to 3 times) while letting the correct answer through.
 alert('Okay, let\'s do something else, this time. You can\'t get it wrong because you have multiple tries!');
 var states = false;
-var i = 0;
-while(states === false && i < 3){
+var tries = 0;
+while(states === false && tries < 3){
   var answer8 = parseFloat(prompt('How many states has The Elizabeth lived in?'));
   if(answer8 === 3){
     alert('Cool, you got it right!');
@@ -79,25 +79,24 @@ while(states === false && i < 3){
     tally++;
   }else if(answer8 > 3){
     alert('Sorry, that number is too large.');
-    i++;
+    tries++;
   }else if(answer8 < 3){
     alert('Sorry, that number is too small.');
-    i++;
+    tries++;
   }else{
     alert('That\'s not a number!');
-    i++;
+    tries++;
   }
 }
 
 // Making a question with an array of answers that are all correct. It should have up to 6 tries.
 var words = false;
 var about = ['place', 'mystical', 'covered', 'clouds', 'home', 'cool', 'new'];
-var j = 0;
-var k = 0;
+var turns = 0;
 
-while(words === false && k < 6){
+while(words === false && turns < 6){
   var answer9 = prompt('What are one of the words I used to describe Elizabeth\'s cool new home Seattle, Washington?').toLowerCase();
-  for(about[j]; j < about.length; j++){
+  for(var j = 0; j < about.length; j++){
     if(answer9 === about[j]){
       words = true;
     }
@@ -107,7 +106,7 @@ while(words === false && k < 6){
     tally++;
   }else{
     alert('That\'s not one of the words.');
-    k++;
+    turns++;
   }
 }
 alert('I would have accepted "place","mystical","covered","clouds","home","cool" and "new".');
