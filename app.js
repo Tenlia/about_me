@@ -1,11 +1,9 @@
 'use strict';
 
 //A general greeting. This should spit their name back out at them when welcoming them.
-// function javapage(){
+setTimeout(function(){
   var userName = prompt('Hello! What is your name?');
   alert('Welcome ' + userName + ' glad you\'re here!');
-
-
 
   //I want to give a total at the end for the user of correct vs incorrect answers.
   var tally = 0;
@@ -71,7 +69,6 @@
     }
   };
   question5();
-
 
   //just another yes-or-no question. This one needed an answer for 'maybe'.
   function question6(){
@@ -151,6 +148,4 @@
   }else{
     alert('Hmm, okay, ' + userName + ', you got no right answers... out of 8');
   };
-// };
-
-// setTimeout(javapage(), 40000);
+}, 500);
