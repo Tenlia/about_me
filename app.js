@@ -2,7 +2,7 @@
 
 //A general greeting. This should spit their name back out at them when welcoming them.
 setTimeout(function(){
-  var userName = prompt('Hello! What is your name?');
+  var userName = prompt('Hello there! What is your name?');
   alert('Welcome ' + userName + ' glad you\'re here!');
 
   //I want to give a total at the end for the user of correct vs incorrect answers.
@@ -16,7 +16,7 @@ setTimeout(function(){
       alert('Right! Damn, I thought I got you with that one...');
       tally++;
     }else{
-      alert('Wrong, Ha! Tricky question, but you did well, I think...');
+      alert('Wrong, Ha! Tricky question...');
     }
   };
   question1();
