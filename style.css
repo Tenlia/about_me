@@ -6,14 +6,15 @@
   font-family: 'Proza libre', sans-serif;
 }
 body {
-  background-color: #2e2e2e;
+  background-color: #222222;
+  color: #fce6c4;
 }
 section {
   /*outline: 3px dashed blue;*/
   padding: 50px 0px;
   width: 60%;
   margin: 0px auto;
-  background-color: rgba(35, 106, 98, .5);
+  background-color: #004729;
   border-radius: 10px;
 }
 h1 {
@@ -22,14 +23,13 @@ h1 {
   width: 100%;
   padding: 20px;
   text-align: center;
-  color: rgb(0, 0, 0);
+  color: #d4b077;
   font-family: 'Rock Salt', cursive;
+  text-shadow: 1px 1px #111111;
 }
 h2 {
   text-align: center;
   margin: 2px 0px;
-}
-section h2 {
   font-family: 'BioRhyme', serif;
 }
 p {
@@ -43,9 +43,19 @@ li {
 }
 div {
   position: fixed;
-  margin-top: 70px;
+  margin-top: 100px;
   width: 20%;
   height: 100%;
+  min-width: 200px;
+}
+div li {
+    font-size: 1.25em;
+    padding-left: 5px;
+    margin-left: 20px;
+}
+div h2 {
+  padding: 0px 20px;
+  color: #d4b077;
 }
 #left {
   top: 0;
