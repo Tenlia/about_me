@@ -93,10 +93,10 @@ setTimeout(function(){
 
   //making a question that loops for the false answers(up to 4 tries) while letting the correct answer through.
   //Alison functionized
-  alert('Okay, let\'s do something else, this time. You can\'t get it wrong because you have multiple tries!');
-  var userIncorrect = true;
-  var tries = 0;
   function stateQuestion(){
+    alert('Okay, let\'s do something else, this time. You can\'t get it wrong because you have multiple tries!');
+    var userIncorrect = true;
+    var tries = 0;
     while(userIncorrect && tries < 4){
       var answer8 = parseFloat(prompt('How many states has Elizabeth lived in?'));
       if(answer8 === 3){
